@@ -1,0 +1,14 @@
+<section class="comment">
+  <header class="comment__header">
+    <div class="comment__header__date"><%= comment.created_at %></div>
+  </header>
+  <div class="comment__body">
+    <blockquote class="comment__body__text">
+      <p><%= comment.body %></p>
+    </blockquote>
+  </div>
+  <footer class="comment__footer">
+    <%= link_to 'Edit', edit_comment_path(comment), class: "button button-clear comment__footer__link comment__footer__edit-link" %>
+    <%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' }, class: "button button-clear comment__footer__link comment__footer__delete-link" %>
+  </footer>
+</section>

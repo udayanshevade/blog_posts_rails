@@ -10,6 +10,13 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @post = Post.find(params[:id])
+    if @post.nil?
+      flash[:error] = 'Post does not exist'
+      redirect_to(root_path)
+    end
+    @comment = Comment.new
+    @comments = Comment.where(:post_id => params[:id])
   end
 
   # GET /posts/new
