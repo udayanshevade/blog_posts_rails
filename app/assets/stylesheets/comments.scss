@@ -1,7 +1,7 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.posts {
+.comments {
   &__header {
     margin: 1rem 0;
   }
@@ -15,15 +15,18 @@
   }
 }
 
-.post {
-  background: #fafafa;
-  padding: 2em;
+.comment {
+  &__new {
+    padding: 2em 0;
+  }
+
+  padding: 1em 2em;
 
   &__header {
     margin: 0 0 1rem;
 
     &__title {
-      margin: 0 1rem 0 0;
+      margin: 0;
       color: initial;
 
       &-link {

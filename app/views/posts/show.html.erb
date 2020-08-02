@@ -3,3 +3,12 @@
 <%= link_to 'Back', posts_path, class: "button button-clear back-link" %>
 
 <%= render partial: "post", object: @post %>
+
+<%= render :partial => "comments/form", :locals => { :post => @post, :comment => @comment } %>
+<% if defined? comment_notice %>
+  <p id="comment_notice"><%= comment_notice %></p>
+<% end %>
+
+<section class="post__comments__main">
+  <%= render(partial: "comments/comment", collection: @comments) || "No comments yet" %>
+</section>

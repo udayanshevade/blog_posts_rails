@@ -1,6 +1,6 @@
 # README
 
-Live site [here](https://nameless-plateau-29451.herokuapp.com)
+Live site [here](https://pacific-everglades-84046.herokuapp.com/)
 
 # Rails Blog
 Small rails app for blog posts.
