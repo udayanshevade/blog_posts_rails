@@ -1,0 +1,19 @@
+<section class="post">
+  <header class="post__header">
+    <div class="post__header__date"><%= post.created_at %></div>
+    <h3 class="post__header__title">
+      <%= link_to post, class: "post__header__title-link" do %>
+        <%= post.title %>
+      <% end %>
+    </h3>
+  </header>
+  <div class="post__body">
+    <blockquote class="post__body__text">
+      <p><%= truncate(post.body, length: 100, separator: ' ') %></p>
+    </blockquote>
+  </div>
+  <footer class="post__footer">
+    <%= link_to 'Edit', edit_post_path(post), class: "button button-clear post__footer__edit-link" %>
+    <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "button button-clear post__footer__delete-link" %>
+  </footer>
+</section>

@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<header class="posts__header">
+  <h2 class="posts__title">Posts</h2>
+</header>
+
+<main class="posts__main">
+  <%= render(partial: "post", collection: @posts) || "No posts yet" %>
+</main>
+
+<footer>
+  <%= link_to 'New Post', new_post_path, class: "posts__create-link button button-outline" %>
+</footer>
